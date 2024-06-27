@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --main-font-family: 'Montserrat', sans-serif;
+    --rectangle-color: #38cee2;
+    --background-color: #f1f1f1;
+    --letter-color: #ffffff;
+    --letter-color-button: #0c5a64;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    font-weight: bold;
+    font-family: var(--main-font-family);
+    color: var(--letter-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+.rectangle-login-user {
+    position: relative;
+    position: relative;
+    width: 680px;
+    height: 350px;
+    background-color: var(--rectangle-color);
+    font-family: var(--main-font-family);
+    border-radius: 20px;
+    color: var(--letter-color);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.align-form-choose-user {
+    font-family: var(--main-font-family);
+    font-size: 18px;
+    color: var(--letter-color);
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    left: auto;
+}
+
+align-textarea {
+    color: #38cee2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--main-font-family);
+    font-size: 18px;
+    color: var(--letter-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

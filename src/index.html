@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="rectangle-login-user">
+        <h1>Login</h1>
+        <div>
+            <form class="align-form-user-login" id="loginForm" action="/login-user" method="post">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="button">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+
+        <div id="serverMessageLogin"></div>
+
+        <div class="button-container">
+            <div class="back-button">
+                <a href="./choose-user.html">Esqueci a senha</a>
+            </div>
+            <div class="talk-adm-button">
+                <a href="./choose-user.html">Solicitar Cadastro</a>
+            </div>
+        </div>
+    </div>
+    <script src="./script/config.js"></script> <!-- Inclua o arquivo de configuração primeiro -->
+    <script src="./script/index.js"></script> <!-- Inclua o script principal depois -->
+</body>
+
+</html>
