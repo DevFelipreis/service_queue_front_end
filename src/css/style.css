@@ -29,10 +29,8 @@ body {
 }
 
 .rectangle-login-user {
-    position: relative;
-    position: relative;
-    width: 680px;
-    height: 350px;
+    width: 300px;
+    height: 400px;
     background-color: var(--rectangle-color);
     font-family: var(--main-font-family);
     border-radius: 20px;
@@ -43,32 +41,60 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.align-form-choose-user {
-    font-family: var(--main-font-family);
-    font-size: 18px;
-    color: var(--letter-color);
-    cursor: pointer;
-    padding: 10px;
-    margin-top: 10px;
-    left: auto;
-}
-
-align-textarea {
-    color: #38cee2;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.align-form-user-login {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    font-family: var(--main-font-family);
-    font-size: 18px;
+    align-items: flex-start;
+}
+
+.align-form-user-login label,
+.align-form-user-login input {
+    margin: 5px 0;
+}
+
+.align-form-user-login input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button {
+    margin-top: 10px;
+}
+
+.button input {
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: var(--letter-color);
+    color: var(--letter-color-button);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.button-container a {
     color: var(--letter-color);
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button-container .back-button a,
+.button-container .talk-adm-button a {
+    padding: 10px;
+    border: 1px solid var(--letter-color);
+    border-radius: 5px;
 }
