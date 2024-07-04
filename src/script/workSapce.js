@@ -12,6 +12,7 @@ function loadContent(page) {
         case 'fila':
             content.innerHTML = `
                 <h2>Fila de Atendimento</h2>
+                <h2>Filtrar por:</h2>
                 <form id="filaForm">
                     <label for="filter">Filtrar por:</label>
                     <select id="filter" name="filter">
@@ -25,18 +26,43 @@ function loadContent(page) {
                     <button type="submit">Buscar</button>
                 </form>
             `;
-            document.getElementById('filaForm').addEventListener('submit', async (event) => {
+
+            const filaForm = document.getElementById('filaForm');
+            filaForm.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 const filter = document.getElementById('filter').value;
 
                 try {
-                    const response = await fetch(`http://localhost:3000/queue?filter=${encodeURIComponent(filter)}`, {
+                    let endpoint = '';
+                    switch (filter) {
+                        case 'name':
+                            endpoint = 'queue-name';
+                            break;
+                        case 'preferential===true':
+                            endpoint = 'queue-preferential-true';
+                            break;
+                        case 'open_service===false':
+                            endpoint = 'queue-open-service-false';
+                            break;
+                        case 'open_service===true':
+                            endpoint = 'queue-open-service-true';
+                            break;
+                        case '':
+                            endpoint = 'queue-all';
+                            break;
+                        default:
+                            content.innerHTML += `<p>Opção de filtro inválida.</p>`;
+                            return;
+                    }
+
+                    const response = await fetch(`http://localhost:3000/${endpoint}`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
                             'Authorization': `Bearer ${token}`,
                         },
                     });
+
                     const result = await response.json();
                     content.innerHTML += `<p>Resultado: ${JSON.stringify(result)}</p>`;
                 } catch (error) {
