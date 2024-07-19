@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button class="sidebar-button" onclick="loadContent('fila')">Fila de Atendimento</button>
+            <button class="sidebar-button" onclick="loadContent('criarOperador')">Criar Operador</button>
+            <button class="sidebar-button" onclick="loadContent('atualizarPerfil')">Atualizar Perfil</button>
+            <button class="sidebar-button" onclick="loadContent('apagarPerfil')">Apagar Perfil</button>
+        </div>
+        <div class="content" id="content">
+            <h2>Bem-vindo</h2>
+            <p>Selecione uma opção no menu à esquerda.</p>
+        </div>
+    </div>
+    <script src="./script/workSapce.js"></script>
+</body>
+
+</html>

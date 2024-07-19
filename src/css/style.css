@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --main-font-family: 'Montserrat', sans-serif;
+    --rectangle-color: #38cee2;
+    --background-color: #f1f1f1;
+    --letter-color: #ffffff;
+    --letter-color-button: #0c5a64;
+}
+
+body,
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    font-weight: bold;
+    font-family: var(--main-font-family);
+    color: var(--letter-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+.rectangle-login-user {
+    width: 300px;
+    height: 400px;
+    background-color: var(--rectangle-color);
+    font-family: var(--main-font-family);
+    border-radius: 20px;
+    color: var(--letter-color);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-form-user-login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.align-form-user-login label,
+.align-form-user-login input {
+    margin: 5px 0;
+}
+
+.align-form-user-login input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button {
+    margin-top: 10px;
+}
+
+.button input {
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: var(--letter-color);
+    color: var(--letter-color-button);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.button-container a {
+    color: var(--letter-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button-container .talk-adm-button a {
+    padding: 10px;
+    border: 1px solid var(--letter-color);
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-button {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sidebar-button:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-color);
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--content-color);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="rectangle-login-user">
+        <h1>Login</h1>
+        <div>
+            <form class="align-form-user-login" id="loginForm" action="/login-user" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="button">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+
+        <div id="serverMessageLogin"></div>
+
+        <div class="button-container">
+            <div>
+                <a href="./choose-user.html">Esqueci a senha</a>
+            </div>
+        </div>
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
