@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
 
             if (response.ok) {
-                // Armazenar o token JWT no localStorage
                 localStorage.setItem('token', result.token);
 
                 serverMessageLogin.textContent = 'Login realizado com sucesso!';
